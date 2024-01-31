@@ -1,0 +1,42 @@
+#parrafo3{
+    color:green
+} 
+
+p{
+    font-size: 19px;
+}
+
+/* Para editar el botón padding: hueco entre texto y botón, margin:margen  */
+button{
+    padding: 10px;
+    margin:10px
+
+    }
+button{
+    color:blue
+}
+
+/* Cambiar el fondo del párrafo  */
+p{
+    background-color:gold;
+}
+
+/* cuando queremos seleccionar id se pone  */
+#elemento-padre{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+/* cuando queremos seleccionar elemento por clase se pone .  */
+.elemento-hijo{
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 15px;
+    margin:15px;
+
+}
+
+#enlace{
+    height: 200px;
+}
