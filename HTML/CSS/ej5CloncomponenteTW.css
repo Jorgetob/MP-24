@@ -1,0 +1,46 @@
+.tw{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;   
+    padding: 5px; 
+    background-color:bisque;
+    
+}
+.us{
+    align-items:center;
+    display: flex;
+    font-size: 15px;
+   
+}
+#imagen{
+    
+    border-radius: 100%;
+}
+
+.usuario{
+    display:inline-block;
+    
+}
+.texto{
+}
+.fecha{
+    display: flex;
+    color:gray;
+    border-bottom: solid 1px brown;
+}
+.likes{
+    display: flex;
+    gap:15px;
+    border-bottom: solid 1px brown; 
+}
+.compartir{
+    
+    display: flex;
+    justify-content: space-evenly;
+   & img{
+    width: 20px;
+   }
+   padding: 10px;
+   flex-direction: row;
+   
+}

@@ -1,0 +1,136 @@
+#Todo{
+    background: rgb(192, 192, 230);
+    color:rgb(25, 30, 52);
+    font-family:'Times New Roman', Times, serif;
+    line-height: 27px;
+    margin: 18px;
+    padding: 15px;
+    font-size:medium;
+}
+
+.titulos{
+       
+        writing-mode: horizontal-tb;
+        direction: rtl;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+} 
+
+h4{
+    font-size: 18px;
+    border-bottom:solid 2px black;
+    font-family: 'Cinzel', serif;
+}
+.imagen1{
+    & img{
+        width: 120px;
+        border-radius: 100%;
+    }
+    float: left
+}
+.imagen{ 
+    & img{
+    width: 120px;
+    border-radius: 100%;
+    }
+    float: right
+}
+
+.imagen2{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+}
+
+.presentacion{
+    text-align:justify;
+}
+.historia{
+    text-align:justify;
+}
+
+.fotohistoria{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+
+}
+
+.lugaresinteres{
+    text-align:justify;
+}
+.imagn3{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+} 
+.imagen3{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+}  
+.clima{
+    text-align:justify;
+
+}
+.yrurl{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+}
+.comida{
+    text-align:justify;
+}
+
+.marnoruega{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+}
+
+@media all and (max-width: 600px) {
+    section, aside{
+        float: none;
+        width: 100%;
+    }
+    header {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+.imagen6{
+    & img{
+        width: 400px;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        display:flex;
+    }
+}

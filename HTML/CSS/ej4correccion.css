@@ -1,0 +1,36 @@
+.opiniones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.texto{
+    display: flex;
+    gap:10%;
+    align-items: center;
+ 
+    & img{
+        width:80px;
+        height:80px
+    }
+}
+.bontones{
+    display:flex;
+    gap:10px
+
+}
+button{
+    padding:5px;
+
+}
+.nota-comentarios{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+#nota{
+    background-color: brown;
+    padding: 10px;
+    border-radius: 15px;
+}

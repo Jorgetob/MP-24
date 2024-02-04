@@ -1,0 +1,30 @@
+body{
+    
+    color:blue;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    font-size:15px;
+
+    line-height:normal;
+
+    display: grid;
+    
+    align-items:end;
+
+    justify-content: flex-start;
+
+    padding: 5px;
+
+    margin: 0px;
+
+    border-radius:0px;
+
+    flex-direction: column;
+   
+    height: auto;
+
+button:hover{
+        color:aqua;
+    }
+}
