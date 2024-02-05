@@ -1,49 +1,47 @@
-#Todo{
-    background: rgb(192, 192, 230);
-    color:rgb(25, 30, 52);
-    font-family:'Times New Roman', Times, serif;
+#Todo {
+    background-color: rgb(203, 218, 226);
+    color: rgb(25, 30, 52);
+    font-family: 'Times New Roman', Times, serif;
     line-height: 27px;
     margin: 18px;
     padding: 15px;
-    font-size:medium;
+    font-size: medium;
 }
 
-.titulos{
-       
-        writing-mode: horizontal-tb;
-        direction: rtl;
-        text-align: center;
-        font-family: 'Cinzel', serif;
-} 
-
-h4{
-    font-size: 18px;
-    border-bottom:solid 2px black;
+.titulos {
+    writing-mode: horizontal-tb;
+    direction: rtl;
+    text-align: center;
     font-family: 'Cinzel', serif;
 }
-.imagen1{
-    & img{
-        width: 120px;
-        border-radius: 100%;
-    }
-    float: left
+
+h4 {
+    font-size: 18px;
+    border-bottom: solid 2px black;
+    font-family: 'Cinzel', serif;
 }
-.imagen{ 
-    & img{
+.imagen1 img {
     width: 120px;
     border-radius: 100%;
-    }
-    float: right
+    float: left;
 }
-
-.imagen2{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
+.imagen img {
+    width: 120px;
+    border-radius: 100%;
+    float: right;
+}
+.fotohistoria img,
+.imagen2 img,
+.imagen3 img,
+.imagen6 img,
+.lugaresinteres img,
+.imagn3 img,
+.yrurl img,
+.marnoruega img {
+    width: 400px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
 }
 
 .presentacion{
@@ -53,70 +51,27 @@ h4{
     text-align:justify;
 }
 
-.fotohistoria{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
-
-}
-
 .lugaresinteres{
     text-align:justify;
 }
-.imagn3{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
-} 
-.imagen3{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
-}  
+
 .clima{
     text-align:justify;
 
 }
-.yrurl{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
-}
+
 .comida{
     text-align:justify;
 }
 
-.marnoruega{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
-}
+
 
 @media all and (max-width: 600px) {
-    section, aside{
+    section, aside {
         float: none;
         width: 100%;
     }
+
     header {
         font-size: 1.5em;
     }
@@ -124,13 +79,31 @@ h4{
     footer {
         font-size: 0.8em;
     }
+} 
+footer {
+    background-color: rgb(201, 221, 228);
+    padding: 20px;
+    text-align: center;
 }
-.imagen6{
-    & img{
-        width: 400px;
-        align-items: center;
-        border-radius: 50%;
-        margin: auto;
-        display:flex;
-    }
+
+footer div {
+    margin-bottom: 20px;
 }
+
+.contacto p {
+    margin: 5px 0;
+}
+
+.redes-sociales a,
+.otros-enlaces a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover,
+.otros-enlaces a:hover {
+    color: #007bff;
+       }
