@@ -68,4 +68,3 @@ function  contarVocales(palabra){
 }
 console.log(contarVocales(palab))
 
-i
