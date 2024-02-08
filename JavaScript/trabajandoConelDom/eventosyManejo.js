@@ -1,10 +1,12 @@
-let animalFavoritoDeseado = 'guepardo';
+let animalUsuario = prompt();
+let animalFavorito = 'jirafa';
 
 
-if (animalFavoritoUsuario === animalFavoritoDeseado) {
+if (animalUsuario === animalFavorito) {
     mensajeElemento.innerHTML = '¡Correcto!';
     mensajeElemento.className = 'verde';
 } else {
-    mensajeElemento.innerHTML = 'Incorrecto. Inténtalo de nuevo.';
+    mensajeElemento.innerHTML = 'Incorrecto';
     mensajeElemento.className = 'rojo';
             }
+

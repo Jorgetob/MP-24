@@ -69,3 +69,4 @@ encabezado.classList.add("oscuro");
 
 console.log(encabezado.classList)
 encabezado.classList.remove("oscuro")
+

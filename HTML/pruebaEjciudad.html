@@ -95,17 +95,32 @@
                 <img src="https://www.yr.no/assets/images/yr-some.jpg" alt="yrur">
             </a>  
         </div>  
-        
-        <div class="comida">
-            <h4>Comida típica</h4>
-            <p>La cocina noruega se caracteriza por su enfoque en ingredientes frescos y locales, con una fuerte influencia de los productos del mar y las tradiciones culinarias escandinavas. Comidas típicas noruegas:</p>
-            <ul>
-                <li><strong>Bacalao (Lutefisk):</strong>El bacalao es un pescado muy consumido en Noruega. El lutefisk es una preparación tradicional que implica secar y curar el bacalao, luego rehidratarlo en una solución de lejía antes de cocinarlo. Es un plato particularmente asociado con las festividades navideñas.</li>
-                <li><strong>Salmón: </strong> Noruega es famosa por su salmón de alta calidad. Puedes probarlo ahumado, en forma de gravlaks (salmón marinado), o simplemente preparado al horno.</li>
+            <div class="comida">
+                <h4>Comida típica</h4>
+                <p>La cocina noruega se caracteriza por su enfoque en ingredientes frescos y locales...</p>
+                <ul>
+                    <li><strong>Bacalao (Lutefisk):</strong> El bacalao es un pescado muy consumido en Noruega...</li>
+                    <li><strong>Salmón: </strong> Noruega es famosa por su salmón de alta calidad. Puedes probarlo ahumado, en forma de gravlaks (salmón marinado), o simplemente preparado al horno.</li>
                 <li><strong>Kjøttkaker: </strong> Albóndigas de carne, generalmente hechas con carne de res y cerdo, y servidas con puré de papas y guisantes.</li>
                 <li><strong>Krumkake: </strong>Una galleta en forma de cono, a menudo servida en Navidad y rellena con nata montada.</li>
             </ul>
-        </div>
+                    
+                    
+                    <!-- Otros elementos de la lista -->
+                </ul>
+                
+                <!-- Agregamos un juego de preguntas sobre comida típica de Noruega -->
+                <div id="preguntaComida">
+                    <p>¿Cuál crees que es el alimento que más exporta Noruega?</p>
+                    <button onclick="verificarRespuesta('bacalao')">Bacalao (Lutefisk)</button>
+                    <button onclick="verificarRespuesta('salmon')">Salmón</button>
+                    <button onclick="verificarRespuesta('kjottkaker')">Kjøttkaker</button>
+                    <button onclick="verificarRespuesta('krumkake')">Krumkake</button>
+                </div>
+    
+                <p id="resultado"></p>
+            </div>
+        
         
         <div class="marnoruega">
             <a href="https://mardenoruega.es/">
@@ -155,6 +170,18 @@
             <a href="#">Política de Privacidad</a>
         </div>
     </footer>
+    <script>
+        // Parte del JavaScript
+        function verificarRespuesta(respuesta) {
+            const respuestaCorrecta = 'salmon';
+
+            if (respuesta === respuestaCorrecta) {
+                document.getElementById('resultado').innerHTML = '¡Correcto! El salmón es el producto que más exporta Noruega.';
+            } else {
+                document.getElementById('resultado').innerHTML = 'Respuesta incorrecta. Intenta de nuevo.';
+            }
+        }
+    </script>
 
 </body>
 </html>
