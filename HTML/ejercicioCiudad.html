@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oslo</title>
+    <script defer src="ejercicioCiudad.js"> </script>
     <link rel="stylesheet" href="CSS/ejercicioCiudad.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +91,15 @@
                 <li><strong>Otoño (septiembre a noviembre):</strong> El otoño trae consigo temperaturas más frescas, con máximas que oscilan entre 7 °C y 12 °C. Los colores otoñales pintan los paisajes, y la ciudad se prepara para el invierno.</li>
             </ul>
         </div>
-        
+        <div id="preguntaClima">
+            <h3>¿Sabes cuál es la temperatura mínima registrada en la ciudad de Oslo?</h3>
+            <button onclick="verificarRespuesta1('-17ºC')">-17ºC</button>
+            <button onclick="verificarRespuesta1('-20ºC')">-20ºC</button>
+            <button onclick="verificarRespuesta1('-26ºC')">-26ºC</button>
+            <button onclick="verificarRespuesta1('-30ºC')">-30ºC</button>
+        </div>
+        <p id="resultado1"></p>
+
         <div class="yrurl">
             <a href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/5-18700/Norge/Oslo/Oslo/Oslo%20(Blindern)">
                 <img src="https://www.yr.no/assets/images/yr-some.jpg" alt="yrur">
@@ -108,7 +117,7 @@
             </ul>
         </div>
         <div id="preguntaComida">
-            <p>¿Cuál crees que es el alimento que más exporta Noruega?</p>
+            <h3>¿Cuál crees que es el alimento que más exporta Noruega?</h3>
             <button onclick="verificarRespuesta('bacalao')">Bacalao (Lutefisk)</button>
             <button onclick="verificarRespuesta('salmon')">Salmón</button>
             <button onclick="verificarRespuesta('kjottkaker')">Kjøttkaker</button>
@@ -146,7 +155,7 @@
     <footer>
         <div class="contacto">
             <h4>Contacto</h4>
-            <p>Teléfono: +XX XXX XXX XXX</p>
+            <p>Teléfono: +47 XX XX XX XX</p>
             <p>Email: info@oslo.com</p>
         </div>
 
@@ -163,18 +172,5 @@
             <a href="#">Política de Privacidad</a>
         </div>
     </footer>
-    <script>
-        // Parte del JavaScript
-        function verificarRespuesta(respuesta) {
-            const respuestaCorrecta = 'salmon';
-
-            if (respuesta === respuestaCorrecta) {
-                document.getElementById('resultado').innerHTML = '¡Correcto! El salmón es el producto que más exporta Noruega.';
-            } else {
-                document.getElementById('resultado').innerHTML = 'Respuesta incorrecta. Intenta de nuevo.';
-            }
-        }
-    </script>
-
 </body>
 </html>

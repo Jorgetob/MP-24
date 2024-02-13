@@ -2,7 +2,7 @@
     background-color: rgb(203, 218, 226);
     color: rgb(25, 30, 52);
     font-family: 'Times New Roman', Times, serif;
-    line-height: 27px;
+    line-height: 30px;
     margin: 18px;
     padding: 15px;
     font-size: medium;
@@ -37,8 +37,10 @@ h3{
     border-radius: 100%;
     float: right;
 }
+
 .fotohistoria img,
 .imagen2 img,
+.imagentransp img,
 .imagen3 img,
 .imagen6 img,
 .lugaresinteres img,
@@ -51,23 +53,17 @@ h3{
     display: flex;
 }
 
-.presentacion{
+.presentacion,
+.historia,
+.lugaresinteres,
+.clima,
+.comida,
+.transporte {
     text-align:justify;
 }
 
-.historia{
-    text-align:justify;
-}
-
-.lugaresinteres{
-    text-align:justify;
-}
-
-.clima{
-    text-align:justify;
-}
-
-#preguntaClima{
+#preguntaClima,
+#preguntaComida {
     text-align: center;
     background-color: #cdd1d1;
     padding: 20px;
@@ -95,62 +91,12 @@ button:hover {
     background-color: #2980b9;
 }
 
+#resultado,
 #resultado1 {
     margin-top: 20px;
     font-weight: bold;
 }
 
-.comida{
-    text-align:justify;
-}
-
-#preguntaComida{
-    text-align: center;
-    background-color: #cdd1d1;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-p {
-    margin: 0 0 20px;
-}
-
-button {
-    background-color: #3498db;
-    color: #f2f8f9;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-#resultado {
-    margin-top: 20px;
-    font-weight: bold;
-} 
-
-@media all and (max-width: 600px) {
-    section, aside {
-        float: none;
-        width: 100%;
-    }
-
-    header {
-        font-size: 1.5em;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-} 
 footer {
     background-color: rgb(201, 221, 228);
     padding: 20px;
@@ -177,4 +123,13 @@ footer div {
 .redes-sociales a:hover,
 .otros-enlaces a:hover {
     color: #007bff;
+}
+
+.valoracion {
+    font-size: 2em;
+    cursor: pointer;
+}
+.star:hover,
+.star.active {
+    color: gold;
 }
