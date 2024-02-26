@@ -8,7 +8,7 @@ require([
     "esri/geometry/Polyline",
     "esri/symbols/SimpleFillSymbol"
   ], (Map, MapView, SimpleMarkerSymbol, Graphic, GraphicsLayer,SimpleLineSymbol,Polyline,SimpleFillSymbol) => {
-   
+
    //llamar al mapa
     const mapa = new Map({
       basemap: "dark-gray-vector",

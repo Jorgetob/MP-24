@@ -28,7 +28,7 @@ let parametrosQuery = new Query({
     outFields:['*'],         
 });
 
-capaHospitales.queryFeatures(parametrosQuery)
+capaHospitales.queryFeatures(parametrosQuery)  //promesa
     .then((resultados) => {
         
 // Establecer el símbolo para los hospitales

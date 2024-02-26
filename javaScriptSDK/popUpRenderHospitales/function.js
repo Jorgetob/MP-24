@@ -18,9 +18,9 @@ require(["esri/Map",
     type:'simple',
     symbol:{
       type:'picture-marker',
-      url:'https://64.media.tumblr.com/fe8e8a77dbaa5e4e88e0c452ef181410/1cffe31ec01f4b82-fb/s500x750/44a30f195ff12557d0ee27ce4c9b4ca7e216f4aa.gif',
-      width:60,
-      height:60,
+      url:'https://creazilla-store.fra1.digitaloceanspaces.com/emojis/42251/hospital-emoji-clipart-xl.png',
+      width:25,
+      height:25,
     }
   }
 

@@ -16,9 +16,6 @@ require([
       zoom: 5,
     });
     
-
-    
-
     // Equivalente al addEventListener
     // reactiveUtils.on(() => elementoAlQueVigilo,eventoQueEspero,funcionQueVaAEjecutar)
 
@@ -30,6 +27,4 @@ require([
     })
     mapa.add(capa)
     }
-
-
 });

@@ -29,5 +29,4 @@ require(["esri/WebScene","esri/views/SceneView","esri/views/3d/environment/Snowy
             }   
         }
     }
-
 })

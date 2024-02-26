@@ -1,10 +1,10 @@
 require(["esri/Map","esri/views/MapView","esri/widgets/Search","esri/layers/FeatureLayer"], (Map, MapView, Search, FeatureLayer) => {
 
-  
+
     let mapa = new Map({         //añade el mapa
         basemap:"topo-vector",
     })
-   
+
     const vista = new MapView({  //ver mapa
         container:"viewDiv",
         map:mapa,

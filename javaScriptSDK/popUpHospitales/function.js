@@ -8,7 +8,7 @@ let mapa = new Map({
 })
 
 //creamos la vista del mapa
-  let vista = new MapView({
+ let vista = new MapView({
     container:'viewDiv',
     map:mapa,
     center:[-3.5,40.40],
