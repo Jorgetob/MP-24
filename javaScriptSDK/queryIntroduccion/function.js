@@ -45,7 +45,6 @@ require(["esri/Map","esri/views/MapView","esri/layers/FeatureLayer","esri/rest/s
         capaGrafica.addMany(features)
 
         mapa.add(capaGrafica)
-
     })
     .catch()
 

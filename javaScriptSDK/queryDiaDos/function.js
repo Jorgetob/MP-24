@@ -97,5 +97,4 @@ require([
   
     mapa.add(capaGraficaResultados)
   
-  
   });

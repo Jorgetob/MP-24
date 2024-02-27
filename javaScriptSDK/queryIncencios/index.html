@@ -63,7 +63,7 @@
 
         const resultadoGL = new GraphicsLayer();
 
-        //Ralizo una consulta a la capa de paises del mundo para seleccionar España.
+        //Realizo una consulta a la capa de paises del mundo para seleccionar España."selección de atributos"
 
         var queryEspaña = new Query({
           where: "ISO_CC = 'ESP'",
@@ -73,7 +73,8 @@
 
         paisesMundoFL.queryFeatures(queryEspaña)
           .then(function (results) {
-            // El resultado es un array de 9 objetos
+          
+        // El resultado es un array de 9 objetos
 
             results.features.map((poligono) => {
 

@@ -44,7 +44,5 @@ capaHospitales.queryFeatures(parametrosQuery)  //promesa
         capaGrafica.addMany(features);
 
         mapa.add(capaGrafica);
-        
         })
-
 })

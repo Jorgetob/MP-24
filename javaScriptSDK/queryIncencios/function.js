@@ -84,7 +84,6 @@ require([
   
           capaGrafica.addMany(features)
         })
-  
     })
   
     mapa.add(capaGrafica)

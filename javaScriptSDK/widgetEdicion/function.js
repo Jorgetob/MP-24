@@ -24,5 +24,5 @@ require(["esri/WebMap","esri/views/MapView","esri/widgets/Editor"], (WebMap, Map
     vista.ui.add(edita, {
             position: "top-right",
         });
-})
 
+})
