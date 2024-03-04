@@ -4,13 +4,15 @@ require(["esri/WebScene", "esri/views/SceneView", "esri/Camera"], (
     SceneView,
     Camera
   ) => {
+    
     //escena web 
     const escena = new WebScene({
       portalItem: {
         id: "6db1a1902df944f2b434dd538fa70b24",
       },
     });
-  //camaras
+  
+    //editar camaras
     let camaraInicial = new Camera({
       heading: 90,
       tilt: 45,

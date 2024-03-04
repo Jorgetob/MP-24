@@ -2,10 +2,12 @@ require(["esri/Map",
 "esri/views/MapView",
 "esri/layers/ImageryTileLayer","esri/layers/support/RasterFunction","esri/layers/support/rasterFunctionConstants"],(Map,MapView,ImageryTileLayer,RasterFunction,rasterFunctionConstants)=>{
     
+    //añadimos mapa
     let mapa = new Map ({
         basemap:'gray-vector'
     })
     
+    //vista del mapa
     let vista = new MapView({
         container:'viewDiv',
         map:mapa,

@@ -21,6 +21,7 @@ let censoFL = new FeatureLayer ({
 
 mapa.add(censoFL)
 
+//renderer
 rendererCenso = new ClassBreaksRenderer({
     field:'POP2010'
 })

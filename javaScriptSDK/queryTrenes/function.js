@@ -1,6 +1,6 @@
 require(["esri/Map","esri/views/MapView","esri/layers/FeatureLayer","esri/rest/support/Query","esri/layers/GraphicsLayer"], (Map, MapView,FeatureLayer,Query,GraphicsLayer) => {
 
-    //mapa 
+//mapa 
 const mapa = new Map({
     basemap: "topo-vector",
 });
@@ -61,7 +61,6 @@ let parametrosQuery = new Query({
                 .then(function (results) {
 
                     let color = results.features.map((entidad) => {
-                        
                         entidad.symbol = {
                             type: "simple-line", 
                             color:"red"

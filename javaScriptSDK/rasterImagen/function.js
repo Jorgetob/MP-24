@@ -2,10 +2,12 @@ require(["esri/Map",
 "esri/views/MapView",
 "esri/layers/ImageryTileLayer"],(Map,MapView,ImageryTileLayer)=>{
     
+    //añadimos el mapa
     let mapa = new Map ({
         basemap:'gray-vector'
     })
     
+    //vista de mapa
     let vista = new MapView({
         container:'viewDiv',
         map:mapa,

@@ -1,12 +1,12 @@
 require(["esri/Map","esri/views/MapView","esri/layers/FeatureLayer"],(Map,MapView,FeatureLayer)=>{
 
-    //instancio un mapa con un mapa base de satélite
+    // mapa con un mapa base 
 
     const mapa = new Map({
         basemap: "dark-gray"
     })
 
-    //instacio una vista (ventana) para ver mi mapa
+    // vista (ventana) para ver mi mapa
 
     const view = new MapView({
         container: "viewDiv",

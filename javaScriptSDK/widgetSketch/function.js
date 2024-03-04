@@ -1,4 +1,4 @@
-require(["esri/Map","esri/views/MapView","esri/widgets/Sketch","esri/layers/GraphicsLayer","esri/widgets/Sketch/SketchViewModel"], (Map,MapView,Sketch,GraphicsLayer,SketchViewModel) => {
+require(["esri/Map","esri/views/MapView","esri/widgets/Sketch","esri/layers/GraphicsLayer","esri/widgets/Sketch/SketchViewModel","esri/widgets/Sketch"], (Map,MapView,Sketch,GraphicsLayer,SketchViewModel) => {
     
     //añadir mapa
     const mapa = new Map({

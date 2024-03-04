@@ -6,6 +6,7 @@ require(["esri/Map",
   let mapa = new Map({
     basemap:'gray-vector'
   })
+  
   //añadir vista  al mapa
   let vista = new MapView({
     container:'viewDiv',
@@ -13,6 +14,7 @@ require(["esri/Map",
     center:[-3.5,40.4],
     zoom:5
   })
+
   //crear renderizadores
   let renderizadorHospitales = {
     type:'simple',
@@ -24,6 +26,7 @@ require(["esri/Map",
     }
   }
 
+  //creamos la feature layer
   let hospitalesFL = new FeatureLayer ({
     url:'https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/Hospitales/FeatureServer',
     renderer:renderizadorHospitales

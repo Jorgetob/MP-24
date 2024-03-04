@@ -1,83 +1,74 @@
-require(["esri/Map","esri/views/MapView","esri/layers/FeatureLayer","esri/rest/support/Query","esri/layers/GraphicsLayer","esri/core/reactiveUtils"], (Map, MapView,FeatureLayer,Query,GraphicsLayer,reactiveUtils) => {
+require([
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/layers/FeatureLayer",
+    "esri/rest/support/Query",
+    "esri/layers/GraphicsLayer"
+],(Map,MapView,FeatureLayer,Query,GraphicsLayer)=>{
 
-    //mapa 
-const mapa = new Map({
-    basemap: "topo-vector",
-});
-
-//vista mapa
-const vista = new MapView({  
-    container: "viewDiv",
-    map:mapa,
-    center:[-3, 40],
-    zoom:5,
-    });
-//feature layer 
-//capa de municipios
-let capaProvincias = new FeatureLayer({
-    url:"https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/Prov/FeatureServer"
+    //añadimos mapa
+    let mapa = new Map({
+      basemap:"topo-vector"
     })
 
-
-//capa ferrocarriles españa
-let capaFerrocarriles = new FeatureLayer({
-    url:"https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/RedFerrocarrilesIGN/FeatureServer/6"
+    //añadimos vista de mapa
+    let vista = new MapView({
+      container:"viewDiv",
+      map:mapa,
+      center:[-3.5,40.40],
+      zoom:5
     })
 
-let capaGraficaResultados  =  new GraphicsLayer();
-
-    vista.on("click",(evento)=>{
-        parametrosQueryProvincia = new Query({
-            geometry:evento.mapPoint,
-            spatialRelationship:"intersects",
-            returnGeometry:true,
-            outFields:[]
-        })
-
-
+    //añadimos las capas Feature Layer
+    let provinciasFL = new FeatureLayer({
+      url:"https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/Prov/FeatureServer"
     })
 
-let capaGrafica = new GraphicsLayer()
+    let ferrocarrilesFL = new FeatureLayer({
+      url:"https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/RedFerrocarrilesIGN/FeatureServer/6"
+    })
 
-reactiveUtils.on(()=>vista,'click',function(evento){
+    //capa gráfica
+    let capaGraficaResultados = new GraphicsLayer()
+
+    //creamos la función on click 
+    vista.on('click',(evento)=>{
     
-    let parametrosQuery = new Query({
+      let parametrosQueryProvincia = new Query({   //primer query de provincias
         geometry:evento.mapPoint,
-        spatialReference: 'intersects',
-        returnGeometry: true,
-        outFields:['*']
+        spatialRelationship:'intersects',
+        returnGeometry:true,
+        outFields:[]
     })
 
-    capaProvincias.queryFeatures(parametrosQueryProvincia)
-    .then((resultadosProvincias)=>{
+    provinciasFL.queryFeatures(parametrosQueryProvincia)
+        .then((resultadosProvincias)=>{
 
-        resultadosProvincias.features.map((provincia)=>{
-            
-            let parametrosQuery = new Query({
-                geometry:evento.mapPoint,
-                spatialReference: 'intersects',
-                returnGeometry: true,
-                outFields:[]
+        resultadosProvincias.features.map((provincia)=>{      
+
+            let parametrosQueryFerrocarriles = new Query({    //segundo query de ferrocarriles
+              geometry:provincia.geometry,
+              spatialRelationship:'intersects',
+              returnGeometry:true,
+              outFields:[]
+            })
+
+            ferrocarrilesFL.queryFeatures(parametrosQueryFerrocarriles)
+             .then((resultadosFerrocarriles)=>{
+
+                let lineasConSimbologia = resultadosFerrocarriles.features.map((lineas) => {
+                 lineas.symbol = {
+                    type:'simple-line',     //cambiamos simbología
+                    color:'blue'
+                }
+                return lineas
+                })
+
+                capaGraficaResultados.addMany(lineasConSimbologia)
+                
+                mapa.add(capaGraficaResultados)  //añadimos al mapa
+            })
+        })
+        })
     })
-    //query ferrocarriles
-    capaFerrocarriles.queryFeatures(parametrosQueryFerrocarriles)
-    .then((resultadosFerrocarriles)=> {
-
-        let lineasConSimbologia = resultadosFerrocarriles.features.map((lineas)=> {
-            lineas.symbol={
-                type:"simple-line",
-                color:"blue"
-            }
-        return lineas
-    })
-    })
-        capaGraficaResultados.addMany(lineasConSimbologia)
-
-    })
-
-    mapa.add(capaGraficaResultados)
-
-
-    })
-})
 })

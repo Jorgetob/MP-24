@@ -16,7 +16,7 @@ require([
         let vista = new MapView({
         container: "viewDiv",
         map: mapa,
-        center: [3.5, 40],
+        center: [-3.5, 40],
         zoom: 5,
         });
     

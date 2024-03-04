@@ -2,10 +2,12 @@ require(["esri/Map",
 "esri/views/MapView",
 "esri/layers/FeatureLayer"],(Map,MapView,FeatureLayer)=>{
 
+  //añadir mapa
   let mapa = new Map ({
     basemap:'gray-vector'
   })
 
+  //vista mapa
   let vista = new MapView({
     container:'viewDiv',
     map:mapa,
@@ -13,9 +15,11 @@ require(["esri/Map",
     zoom:8
   })
 
+  //añadir feature layer
   let parcelasFL = new FeatureLayer({
     url:'https://services.arcgis.com/V6ZHFr6zdgNZuVG0/ArcGIS/rest/services/NJ_Farmland_Preservation_Areas/FeatureServer/0',
 
+ //crear renderer   
     renderer:{
       type:'unique-value',
       field:'PARCEL_TYP',
