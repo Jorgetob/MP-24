@@ -1,0 +1,42 @@
+.EjemploCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.EjemploCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.EjemploCard h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.EjemploCard p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.EjemploCard a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.EjemploCard a:hover {
+    background-color: #0056b3;
+}

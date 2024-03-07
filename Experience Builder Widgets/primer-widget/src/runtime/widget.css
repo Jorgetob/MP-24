@@ -1,0 +1,17 @@
+.primerwidget {
+    background-color: #f0f0f000; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 7px; 
+    border-color: rgb(32, 36, 29);
+    margin: 10px; 
+}
+
+.primerwidget h2 {
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.primerwidget p {
+    margin-bottom: 8px; 
+}

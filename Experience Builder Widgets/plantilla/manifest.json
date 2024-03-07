@@ -1,0 +1,15 @@
+{
+  "name": "plantilla",
+  "label": "plantilla",
+  "type": "widget",
+  "version": "1.13.0",
+  "exbVersion": "1.13.0",
+  "author": "Jorge Toboso",
+  "description": "Este Widget contiene todo lo necesario para crear un Widget desde cero",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "translatedLocales": [
+    "en"
+  ]
+}
